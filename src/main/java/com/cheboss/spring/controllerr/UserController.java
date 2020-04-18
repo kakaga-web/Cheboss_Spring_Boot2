@@ -49,7 +49,7 @@ public class UserController {
      *
      * @return the list
      */
-    @GetMapping("/users")
+    @GetMapping("/getAllUsers")
     public List<User> getAllUsers() {
         return userRepository.findAll();
     }
@@ -61,7 +61,7 @@ public class UserController {
      * @return the users by id
      * @throws ResourceNotFoundException the resource not found exception
      */
-    @GetMapping("/users/{id}")
+    @GetMapping("/GetUser/{id}")
     public ResponseEntity<User> getUsersById(@PathVariable(value = "id") Long userId)
             throws ResourceNotFoundException {
         User user =
@@ -77,7 +77,7 @@ public class UserController {
      * @param user the user
      * @return the user
      */
-    @PostMapping("/users")
+    @PostMapping("/PostUser")
     public User createUser(@RequestBody User user) {
         return userRepository.save(user);
     }
@@ -90,7 +90,7 @@ public class UserController {
      * @return the response entity
      * @throws ResourceNotFoundException the resource not found exception
      */
-    @PutMapping("/users/{id}")
+    @PutMapping("/UpdateUser/{id}")
     public ResponseEntity<User> updateUser(
             @PathVariable(value = "id") Long userId, @RequestBody User userDetails)
             throws ResourceNotFoundException {
@@ -114,7 +114,7 @@ public class UserController {
      * @return the map
      * @throws Exception the exception
      */
-    @DeleteMapping("/user/{id}")
+    @DeleteMapping("/DeleteUser/{id}")
     public Map<String, Long> deleteUser(@PathVariable(value = "id") Long userId) throws ResourceNotFoundException {
 
         User user =
