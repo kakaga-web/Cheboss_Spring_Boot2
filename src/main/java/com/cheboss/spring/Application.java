@@ -27,14 +27,16 @@ public class Application {
         LOGGER.info("Example Info level log message");
         LOGGER.debug("Example Debug level log message");
         LOGGER.error("Example Error level log message");
+
+
         // get the UserController Bean
-        UserController service = ctx.getBean(UserController.class);
+     //   UserController service = ctx.getBean(UserController.class);
         // Set User properties
 
-        service.createUser(u1);
+  /*      service.createUser(u1);
         service.createUser(u2);
-
-        try {
+*/
+       /* try {
             service.deleteUser(101L);
 
         } catch (ResourceNotFoundException e) {
@@ -50,7 +52,8 @@ public class Application {
             e.printStackTrace();
         }
         LOGGER.info("\n object 1 -> " + u1);
-        LOGGER.info("\n object 2 -> " + u2);
+        LOGGER.info("\n object 2 -> " + u2);*/
 
 
-    }}
+    }
+}
