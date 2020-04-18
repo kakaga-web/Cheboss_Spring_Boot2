@@ -95,7 +95,7 @@ public class UserController {
     public ResponseEntity<User> updateUser(
             @PathVariable(value = "id") Long userId, @RequestBody User userDetails)
             throws ResourceNotFoundException {
-
+// TODO : My first TODO in my code
         User user =
                 userRepository
                         .findById(userId)
@@ -109,7 +109,6 @@ public class UserController {
     }
 
     /**
-     *
      * @param userId : the user id passed from the API parameter argument
      * @return : returns a map that contains the id of the deleted user
      * @throws ResourceNotFoundException exception thrown if the user isn't found
