@@ -1,4 +1,4 @@
-package com.spring.spring._Java8_exercices;
+package _Java8_exercices;
 
 public class ReturnInsideLoop {
 
