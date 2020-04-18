@@ -37,7 +37,7 @@ import java.util.Map;
  * @author cheboss
  */
 @RestController
-@RequestMapping("/api/v1")
+@RequestMapping("/cheboss")
 public class UserController {
 
     @Autowired
