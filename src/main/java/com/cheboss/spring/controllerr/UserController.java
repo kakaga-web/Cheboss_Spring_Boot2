@@ -90,6 +90,7 @@ public class UserController {
      * @return the response entity
      * @throws ResourceNotFoundException the resource not found exception
      */
+
     @PutMapping("/UpdateUser/{id}")
     public ResponseEntity<User> updateUser(
             @PathVariable(value = "id") Long userId, @RequestBody User userDetails)
@@ -108,11 +109,10 @@ public class UserController {
     }
 
     /**
-     * Delete user map.
      *
-     * @param userId the user id
-     * @return the map
-     * @throws Exception the exception
+     * @param userId : the user id passed from the API parameter argument
+     * @return : returns a map that contains the id of the deleted user
+     * @throws ResourceNotFoundException exception thrown if the user isn't found
      */
     @DeleteMapping("/DeleteUser/{id}")
     public Map<String, Long> deleteUser(@PathVariable(value = "id") Long userId) throws ResourceNotFoundException {
