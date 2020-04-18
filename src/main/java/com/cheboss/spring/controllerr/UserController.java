@@ -126,7 +126,7 @@ public class UserController {
         System.out.println("deleted " + userId);
         Map<String, Long> response = new HashMap<>();
         response.put("The user ID deleted ( I'm a Map ) -> ", userId);
-        System.out.println(response);
+        System.out.println("Response map ----> " + response);
 
         return response;
     }
