@@ -6,6 +6,7 @@ public class StaticMethodAndFieldAcces {
         for (int i = 0; i < 10; i++) {
             CountTest c1 = new CountTest();
             System.out.println(c1.toString()); // Without toString it's juts a reference of the new created object
+            System.out.println(Math.random());
             printCount();
         }
     }
