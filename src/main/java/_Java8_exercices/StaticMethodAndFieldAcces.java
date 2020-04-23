@@ -7,6 +7,7 @@ public class StaticMethodAndFieldAcces {
             CountTest c1 = new CountTest();
             System.out.println(c1.toString()); // Without toString it's juts a reference of the new created object
             System.out.println(Math.random());
+            System.out.println(true);// c1 instanceof CountTest
             printCount();
         }
     }
@@ -17,8 +18,8 @@ public class StaticMethodAndFieldAcces {
     }
 }
 
-class CountTest { // Two classes inside the main class, but one is declared public
-    private static int instanceCount = 0;
+class CountTest extends StaticMethodAndFieldAcces { // Two classes inside the main class, but one is declared public
+    private static int instanceCount = 9;
 
     public CountTest() {
         instanceCount++;

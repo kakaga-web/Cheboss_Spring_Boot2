@@ -100,7 +100,11 @@ public class User {
         return createdAt;
     }
 
-/* @Override // this is useful because the compiler will check if this method is really overrided or not! plus code visibility
+    public long getId() {
+        return id;
+    }
+
+    /* @Override // this is useful because the compiler will check if this method is really overrided or not! plus code visibility
     public String toString() {
         return "User{" +
                 "id=" + id +
