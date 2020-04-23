@@ -1,4 +1,7 @@
-GET http://localhost:8091/api/v1/users/
+GET http://localhost:8091/cheboss/getAllUsers
+
+###
+
 
 
 

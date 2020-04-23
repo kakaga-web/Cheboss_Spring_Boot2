@@ -32,11 +32,11 @@ import java.util.Date;
  *
  * @author cheboss
  */
-@RequiredArgsConstructor
+//@RequiredArgsConstructor
 @NoArgsConstructor
 @ToString // Commenting well return the reference of the object, overriding toString will return our desired values
-@Getter
-@Setter
+//@Getter
+//@Setter
 @Entity
 @Table(name = "users")
 @EntityListeners(AuditingEntityListener.class)
@@ -61,6 +61,44 @@ public class User {
     private Date createdAt;
 
 
+
+    public User(String firstName, String email, String lastName) {
+        this.firstName = firstName;
+        this.email = email;
+        this.lastName = lastName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public void setCreatedAt(Date createdAt) {
+        this.createdAt = createdAt;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public Date getCreatedAt() {
+        return createdAt;
+    }
 
 /* @Override // this is useful because the compiler will check if this method is really overrided or not! plus code visibility
     public String toString() {
