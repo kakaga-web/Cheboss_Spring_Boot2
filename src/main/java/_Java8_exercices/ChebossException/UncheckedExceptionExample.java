@@ -40,6 +40,9 @@ public class UncheckedExceptionExample {
 
     public static int divideTheseNumbers(int dividendArg, int divisorArg) { // Unchecked exception
         return dividendArg / divisorArg; // Unchecked Exception
+        //We have two choices when an exception object is created in our application
+        //Either we will handle it within method
+        //Or we can pass it to the caller method to let it handle.
     }
 
 }
