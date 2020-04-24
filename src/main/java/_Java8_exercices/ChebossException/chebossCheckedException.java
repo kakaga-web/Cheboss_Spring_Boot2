@@ -4,9 +4,9 @@ import java.io.*;
 
 public class chebossCheckedException {
     public static void main(String[] args) {
-
+        String path = "C:\\Users\\Fatima et yassine\\IdeaProjects\\Cheboss_Spring_Boot2_\\src\\main\\java\\_Java8_exercices\\ChebossException\\inputCheboss.txt";
         try {
-            openFile("C:\\Users\\Fatima et yassine\\IdeaProjects\\Cheboss_Spring_Boot2_\\src\\main\\java\\_Java8_exercices\\ChebossException\\inputCheboss.txt");
+            openFile(path);
             System.out.println("Yes the file exists !! ");
         } catch (FileNotFoundException e) {
             System.out.println(" file not found ! ");
@@ -17,6 +17,7 @@ public class chebossCheckedException {
 // Checked exception Extends Throwable and all the other exceptions are Unchecked exception ( Runtime and Error exceptions )
 
     public static void openFile(String name) throws FileNotFoundException { // Checked exception
+
 // I can put a try catch block here so i won't have to declare it in the main method ( i'll also not need throws FileNotFoundException !!
         FileInputStream f = new FileInputStream(name);
 
