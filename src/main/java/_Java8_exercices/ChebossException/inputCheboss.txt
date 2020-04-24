@@ -1,0 +1,5 @@
+For Closeable resources, such as streams, Java SE 7 introduced try-with-resources
+statements which is recommended ways to handle exceptions in mentioned scenarios.
+In this approach, we are not
+ required to close the streams and JVM does it for us.
+ It eliminates the need of finally blocks.

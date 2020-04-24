@@ -3,32 +3,21 @@ package _Java8_exercices.ChebossException;
 import java.io.*;
 
 public class chebossCheckedException {
-    public static void main(String[] args) {
-        String path = "C:\\Users\\Fatima et yassine\\IdeaProjects\\Cheboss_Spring_Boot2_\\src\\main\\java\\_Java8_exercices\\ChebossException\\inputCheboss.txt";
-        try {
-            openFile(path);
-            System.out.println("Yes the file exists !! ");
-        } catch (FileNotFoundException e) {
-            System.out.println(" file not found ! ");
+    public static void main(String[] args) throws IOException {
+        String path = "C:\\Users\\Fatima et yassine\\IdeaProjects\\Chebfoss_Spring_Boot2_\\src\\main\\java\\_Java8_exercices\\ChebossException\\inputCheboss.txt";
+        try (BufferedReader br = new BufferedReader(new FileReader(path))) { // Java 7 closes the file for us ( no need for finally )
+            String sCurrentLine;
+            System.out.println(" The whole text read from the file is listed below \n ");
+            while ((sCurrentLine = br.readLine()) != null) {
+                System.out.println(sCurrentLine);
+            }
+            System.out.println("\n file reading is finished ");
+        } catch (Exception e) {
+            System.out.println(e.getMessage() + "\n");
             e.printStackTrace();
+            throw new FileNotFoundException("\n no such file is present in the directory Mr cheboss") ;
         }
-
-    }
 // Checked exception Extends Throwable and all the other exceptions are Unchecked exception ( Runtime and Error exceptions )
 
-    public static void openFile(String name) throws FileNotFoundException { // Checked exception
-
-// I can put a try catch block here so i won't have to declare it in the main method ( i'll also not need throws FileNotFoundException !!
-        FileInputStream f = new FileInputStream(name);
-
     }
-
-
-  /*  public static void main(String[] args) throws FileNotFoundException {
-        openFile("C:\\Users\\Fatima et yassine\\IdeaProjects\\Cheboss_Spring_Boot2_\\src\\main\\java\\_Java8_exercices\\inputCheboss.txt");
-    }
-
-    public static void openFile(String name) throws FileNotFoundException {
-        FileInputStream f = new FileInputStream(name);
-    }*/
 }
