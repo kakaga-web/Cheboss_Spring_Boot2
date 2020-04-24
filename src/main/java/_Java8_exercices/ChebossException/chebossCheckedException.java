@@ -4,7 +4,7 @@ import java.io.*;
 
 public class chebossCheckedException {
     public static void main(String[] args) throws IOException {
-        String path = "C:\\Users\\Fatima et yassine\\IdeaProjects\\Chebfoss_Spring_Boot2_\\src\\main\\java\\_Java8_exercices\\ChebossException\\inputCheboss.txt";
+        String path = "C:\\Users\\Fatima et yassine\\IdeaProjects\\Cheboss_Spring_Boot2_\\src\\main\\java\\_Java8_exercices\\ChebossException\\inputCheboss.txt";
         try (BufferedReader br = new BufferedReader(new FileReader(path))) { // Java 7 closes the file for us ( no need for finally )
             String sCurrentLine;
             System.out.println(" The whole text read from the file is listed below \n ");
