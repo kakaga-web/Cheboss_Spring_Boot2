@@ -25,7 +25,7 @@ public class ArrayListExample {
         List<String> aList = new ArrayList<>(); // ArrayList<String> aList = new ArrayList<>(); is also valid because ArrayList implements List
         // BEST PRACTICE IS : always program against Interface ! so when a new implementation of list appear, it won't cause yt
         aList.add("Orange");
-        aList.add("Apple");
+        aList.add("hkk");
         aList.add("Peach");
         aList.add("Guava");
         aList.add("Mango");
